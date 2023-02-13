@@ -16,7 +16,9 @@ export default function Navigation() {
 			<StyledNavList id='primaryNavigation' title='Asosiy menu'>
 				{navLinks.map((navLink) => (
 					<StyledNavItem key={crypto.randomUUID()}>
-						<StyledNavSelect>
+						<StyledNavSelect onMouseOver={() => {
+							console.log("We're currently hovering over our select");
+						}}>
 							{navLink.title}
 							<StyledNavSelectWrapper>
 								{navLink.dropdown.map((item) => (
