@@ -13,7 +13,15 @@ module.exports = {
         "time": "url(/images/time.svg)",
         "footer": "url(/images/footer/footer-bg.png)",
         "dropdown": "url(/images/dropdown.svg)"
-      }
+      },
+      colors: {
+        "my-primary": {
+          100: "#01384D"
+        },
+        "my-coral": {
+          100: "#EABF9F"
+        }
+      },
     },
   },
   plugins: [],

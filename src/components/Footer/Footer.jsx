@@ -14,12 +14,14 @@ import mailLogo from "/images/footer/mail.svg";
 import facebookLogo from "/images/footer/facebook.svg";
 import telegramLogo from "/images/footer/telegram.svg";
 import { TextContainer } from "../TextContainer/TextContainer";
+import { useLocation } from "react-router-dom";
 const formSchema = zod.object({
     name: zod.string("Iltimos ismingizni kiriting!"),
     email: zod.string().email("Iltimos, to'g'ri emailni kiriting!")
 });
 
 export function Footer() {
+    const location = useLocation();
     const success = (msg) => toast.success(msg);
     const fail = (msg) => toast.error(msg);
     const { handleSubmit, register, formState: { errors, isValid }, reset } = useForm({
@@ -33,8 +35,11 @@ export function Footer() {
         if (!isValid) return fail("Iltimos, formani to'liq va to'g'ri to'ldiring!");
         return success("Muvaffaqqiyatli yuborildi!") && reset();
     }
+    console.log(["/login", "/admin", "/news/add"].join(""));
     return (
-        <StyledFooter>
+        <StyledFooter style={{
+            display: ["/login", "/admin","/news/add"].includes(location.pathname) ? "none" : "block"
+        }}>
             <StyledContainer>
                 <StyledFooterWrapper>
                     <StyledFooterInner>

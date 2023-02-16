@@ -253,6 +253,7 @@ a > img{
 
 /* VISUALLY-HIDDEN */
 .visually-hidden {
+  
   position: absolute;
   width: 1px;
   height: 1px;
@@ -260,6 +261,7 @@ a > img{
   padding: 0;
   border: 0;
   white-space: nowrap;
+  
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -296,6 +298,7 @@ a > img{
 }
 
 .bg-secondary-100 {
+  
   background-color: #3e3e3e;
 }
 
@@ -473,4 +476,10 @@ export const StyledApp = styled(motion.div).attrs({ className: "App" })`
   
 `;
 export const StyledMain = styled(motion.main).attrs({ className: "site-main" })``;
+export const StyledFullPageWrapper = styled(motion.section).attrs({ className: "relative min-h-screen flex items-center justify-center" })``;
+export const StyledFlexWrapper = styled.div.attrs({ className: "" })`
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:1rem;
+`;
 export default GlobalStyles

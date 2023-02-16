@@ -1,8 +1,8 @@
 import { StyledCourseBody, StyledCourseText, StyledCourseTitle } from "./courses.styles";
-import { StyledContainer } from "../../styles/global";
-import { GridSection } from "../GridSection/GridSection";
-import { CardGrid, CardGridImage, CardGridItem } from "../CardGrid/CardGrid";
-import { courses } from "../../data/courses";
+import { StyledContainer } from "../../../styles/global";
+import { GridSection } from "../../../components/GridSection/GridSection";
+import { CardGrid, CardGridImage, CardGridItem } from "../../../components/CardGrid/CardGrid";
+import { courses } from "../../../data/courses";
 
 
 
