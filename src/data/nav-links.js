@@ -2,8 +2,9 @@ const NavLinks = [
 	{
 		title: 'Maktab',
 		dropdown: [
-			{ value: 'Dropdown 1', label: 'Dropdown 1' },
-			{ value: 'Dropdown 2', label: 'Dropdown 2' },
+			{ value: 'Maktab haqida', label: 'about' },
+			{ value: 'Rahbariyat', label: 'staff' },
+			{ value: 'Maktab tuzilmasi', label: 'school' },
 			{ value: 'Dropdown 3', label: 'Dropdown 3' },
 			{ value: 'Dropdown 4', label: 'Dropdown 4' },
 		],
@@ -20,7 +21,7 @@ const NavLinks = [
 	{
 		title: 'Ta’lim yo’nalishlari',
 		dropdown: [
-			{ value: 'Dropdown 1', label: 'Dropdown 1' },
+			{ value: "Yo'nalishlar", label: 'spheres' },
 			{ value: 'Dropdown 2', label: 'Dropdown 2' },
 			{ value: 'Dropdown 3', label: 'Dropdown 3' },
 			{ value: 'Dropdown 4', label: 'Dropdown 4' },
@@ -38,7 +39,7 @@ const NavLinks = [
 	{
 		title: 'Axborot xizmati',
 		dropdown: [
-			{ value: 'Dropdown 1', label: 'Dropdown 1' },
+			{ value: 'Yangiliklar', label: 'news' },
 			{ value: 'Dropdown 2', label: 'Dropdown 2' },
 			{ value: 'Dropdown 3', label: 'Dropdown 3' },
 			{ value: 'Dropdown 4', label: 'Dropdown 4' },

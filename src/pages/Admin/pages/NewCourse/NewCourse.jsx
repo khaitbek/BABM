@@ -3,9 +3,9 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate, useParams, useRoutes } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { courseApi, newsApi } from "../../../../api";
-import { CourseSchema } from "../../../../schemas";
-import { StyledFlexWrapper, StyledFullPageWrapper } from "../../../../styles/global";
+import { courseApi, newsApi } from "../../../../api"
+import { CourseSchema } from "../../../../schemas"; 
+import { StyledFlexWrapper, StyledFullPageWrapper } from "../../../../styles/global"
 import StyledForm, { StyledFormButton, StyledFormCloseButton, StyledFormGroup, StyledFormInput, StyledFormLabel, StyledFormTitle, StyledFormWrapper } from "../AdminForm/admin-form.styles";
 
 export default function NewCourse() {

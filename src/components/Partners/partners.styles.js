@@ -11,7 +11,7 @@ export const StyledPartner = styled.div.attrs({ className: "flex flex-col justif
     }
 
 `
-export const StyledPartnerTitle = styled.h3.attrs({ className: "font-medium mt-4 text-center" })`
+export const StyledPartnerTitle = styled.a.attrs({ className: "font-medium mt-4 text-center" })`
     
 
 `

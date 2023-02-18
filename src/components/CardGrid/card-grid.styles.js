@@ -4,14 +4,14 @@ import styled from "styled-components";
 export const StyledCardGrid = styled.ul.attrs({
     className: "grid relative justify-center"
 })`
-    grid-template-columns:${props => `repeat(${props.rows}, ${props.itemWidth})`};
+    grid-template-columns:${props => `repeat(auto-fit, ${props.itemWidth})`};
     gap:${props => props.gap};
     padding-left:${props => props.paddingStart};
     padding-right:${props => props.paddingEnd};
 `
 
 export const StyledCardItem = styled.li.attrs({
-    className: "relative mr-1"
+    className: "relative mr-1 cursor-pointer"
 })`
     grid-column:${props => `span ${props.colSpan}`};
 `

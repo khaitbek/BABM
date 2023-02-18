@@ -7,12 +7,14 @@ import Loader from "../../../../../components/Loader";
 import { StyledTable, StyledTableBody, StyledTableData, StyledTableHead, StyledTableHeader, StyledTableRow, StyledTableUnstyledRow } from "./admin-table.styles";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import { partnerApi } from "../../../../../api";
 export default function AdminTable({ tableFor, tableHeaders, page, hooks }) {
     const tableRoute = tableFor;
     const { data, isLoading } = useQuery({
         queryKey: [tableFor],
         queryFn: async () => {
             if (tableFor === "files") return await (await axiosAdminClient.get(`${tableRoute}?page=0&size=100`)).data?.content;
+            if (tableFor === "partners") return await (await partnerApi.getAll()).data;
             return await (await axiosUserClient.get(`${tableRoute}?page=0&size=100`)).data?.content;
         },
         staleTime: 50000

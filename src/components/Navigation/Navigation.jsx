@@ -10,26 +10,27 @@ import {
 } from './navigation.styles';
 import navLinks from '../../data/nav-links';
 import Select from "react-select";
+import { useNavigate } from "react-router-dom";
 export default function Navigation() {
+	const navigate = useNavigate();
 	return (
 		<StyledNav>
 			<StyledNavList id='primaryNavigation' title='Asosiy menu'>
 				{navLinks.map((navLink) => (
 					<StyledNavItem key={crypto.randomUUID()}>
-						<StyledNavSelect onMouseOver={() => {
-							console.log("We're currently hovering over our select");
-						}}>
+						<StyledNavSelect>
 							{navLink.title}
 							<StyledNavSelectWrapper>
 								{navLink.dropdown.map((item) => (
-									<StyledNavOption key={crypto.randomUUID()} value={item.value}>
-										{item.label}
+									<StyledNavOption onClick={() => {
+										navigate(`${item.label}`)
+									}} key={crypto.randomUUID()} value={item.value}>
+										{item.value}
 									</StyledNavOption>
 								))}
 
 							</StyledNavSelectWrapper>
 						</StyledNavSelect>
-						{/* <Select options={navLink.dropdown} /> */}
 					</StyledNavItem>
 				))}
 			</StyledNavList>

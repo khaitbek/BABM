@@ -1,6 +1,6 @@
-import { StyledContainer } from "../../styles/global";
 import { TextContainer } from "../TextContainer/TextContainer";
 import { StyledGridSection, StyledGridSectionSubtitle, StyledGridSectionTitle } from "./grid-section.styles";
+import { StyledContainer } from "../../styles/global";
 
 export function GridSection({ title, subtitle, children, paddingTop = "64px" }) {
     return (

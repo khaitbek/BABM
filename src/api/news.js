@@ -10,6 +10,9 @@ const newsApi = {
     },
     getAll: async () => {
         return await axiosUserClient.get("/news?page=0&size=100");
+    },
+    getOne: async (id) => {
+        return await axiosUserClient.get(`/news/${id}`);
     }
 };
 

@@ -7,9 +7,9 @@ export function CardGrid({ paddingStart = 0, paddingEnd = 0, rows = 4, gap = "1r
         </StyledCardGrid>
     )
 }
-export function CardGridItem({ colSpan = 1, children }) {
+export function CardGridItem({ colSpan = 1, children, onClick }) {
     return (
-        <StyledCardItem data-aos="fade-up" colSpan={colSpan} transition={{ duration: 1 }}>
+        <StyledCardItem onClick={onClick} data-aos="fade-up" colSpan={colSpan} transition={{ duration: 1 }}>
             {children}
         </StyledCardItem>
     )

@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query"
 import { useNavigate } from "react-router-dom";
-import { courseApi } from "../../../../api"
-import Loader from "../../../../components/Loader";
-import { CourseHeaders } from "../../../../data/table-data";
+import { courseApi } from "../../../../api"; 
+import Loader from "../../../../components/Loader"; 
+import { CourseHeaders } from "../../../../data/table-data"; 
 import AdminTable from "../../components/Sidebar/AdminTable/AdminTable";
 
 export default function AdminCourse() {

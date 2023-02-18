@@ -482,4 +482,5 @@ export const StyledFlexWrapper = styled.div.attrs({ className: "" })`
   grid-template-columns: repeat(2,1fr);
   gap:1rem;
 `;
+export const StyledDiv = styled.div``;
 export default GlobalStyles

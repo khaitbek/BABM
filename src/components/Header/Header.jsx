@@ -7,7 +7,7 @@ export default function Header() {
         <StyledHeader>
             <StyledContainer>
                 <StyledHeaderWrapper>
-                    <StyledSiteLogo href="#">
+                    <StyledSiteLogo to="/">
                         <StyledSiteLogoImg src={SiteLogo} width={187} height={50} alt="Barkamol Avlod Respublika bolalar markazi logosi" />
                     </StyledSiteLogo>
                     <Navigation />

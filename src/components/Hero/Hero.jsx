@@ -11,8 +11,8 @@ import {
 	StyledHeroWrapper,
 } from './hero.styles';
 import { StyledContainer } from '../../styles/global';
-import { StyledButton } from '../Button/button.styles';
-import { Button } from '../Button/Button';
+import { StyledButton } from '../../components/Button/button.styles';
+import { Button } from '../../components/Button/Button';
 import { TextContainer } from '../TextContainer/TextContainer';
 import { socialIcons } from '../../data/hero-social';
 
