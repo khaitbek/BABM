@@ -7,13 +7,14 @@ import 'aos/dist/aos.css';
 import { PacmanLoader } from "react-spinners";
 import AdminNews from "./pages/Admin/pages/News/News";
 import AdminPartner from "./pages/Admin/pages/Partner";
-const Loader = lazy(() => import("./components/Loader")); 
-const AddNews = lazy(() => import("./pages/Admin/pages/AddNews")) ;
-const NewCourse = lazy(() => import("./pages/Admin/pages/NewCourse/NewCourse")) ;
-const FormPageWrapper = lazy(() => import("./components/FormPageWrapper")) ;
-const NewPartner = lazy(() => import("./pages/Admin/pages/NewPartner/NewPartner")) ;
-const NewFile = lazy(() => import("./pages/Admin/pages/NewFile/NewFile")) ;
-const Course = lazy(() => import("./pages/Admin/pages/Course")) ;
+import AdminFiles from "./pages/Admin/pages/Files";
+const Loader = lazy(() => import("./components/Loader"));
+const AddNews = lazy(() => import("./pages/Admin/pages/AddNews"));
+const NewCourse = lazy(() => import("./pages/Admin/pages/NewCourse/NewCourse"));
+const FormPageWrapper = lazy(() => import("./components/FormPageWrapper"));
+const NewPartner = lazy(() => import("./pages/Admin/pages/NewPartner/NewPartner"));
+const NewFile = lazy(() => import("./pages/Admin/pages/NewFile/NewFile"));
+const Course = lazy(() => import("./pages/Admin/pages/Course"));
 const AdminCourse = lazy(() => import("./pages/Admin/pages/Course/Course"));
 
 const Home = lazy(() => import("./pages/Home"));
@@ -35,10 +36,11 @@ function App() {
 					<Route path="login" element={token ? <Navigate to="/admin" replace={true} /> : <Login />} />
 					{/* <Route path="courses" element={<Course />} /> */}
 				</Route>
-				<Route path="admin" element={<Admin />}>
-					<Route path="courses" element={<AdminCourse />} />
-					<Route path="news" element={<AdminNews />} />
-					<Route path="partners" element={<AdminPartner />} />
+				<Route path="admin" element={<Admin />} >
+					<Route path="courses" key="course" element={<AdminCourse />}  />
+					<Route path="news" key="news" element={<AdminNews />} />
+					<Route path="partners" key="partner" element={<AdminPartner />} />
+					<Route path="files" key="file" element={<AdminFiles />} />
 				</Route>
 				<Route path="add" element={<FormPageWrapper />}>
 					<Route path="news" element={<AddNews />} />

@@ -1,9 +1,15 @@
-import { axiosAdminClient } from "../main";
+import { axiosAdminClient, axiosUserClient } from "../main";
 
 const fileApi = {
     add: async (data) => {
         const dataToFormData = objectToFormData(data);
         return await axiosAdminClient.post("/file/save", dataToFormData);
+    },
+    getAll: async () => {
+        return await axiosAdminClient.get("/files?page=0&size=100");
+    },
+    getOne: async (name) => {
+        return await axiosUserClient.get("/file/2");
     }
 }
 

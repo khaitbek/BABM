@@ -24,9 +24,7 @@ export default function Login() {
         try {
             const loginMutationData = await mutateAsync(data);
             localStorage.setItem("babm_token", `${loginMutationData.data.type} ${loginMutationData.data.token}`);
-            // navigate("admin");
-            // redirect("/dsfkl;jsafl;aj;sfj");
-            navigate("/admin");
+            navigate("/admin/courses");
             console.log("Redirecting ...");
         } catch (error) {
             console.log(error);

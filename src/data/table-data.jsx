@@ -95,3 +95,21 @@ export const CourseHeaders = createHeader([
     },
     createActionButtons("0px")
 ]);
+export const FileHeader = createHeader([
+    {
+        accessor: "id",
+        header: "ID",
+        cell: (props) => props.row.original.id,
+    },
+    {
+        accessor: "name",
+        header: "Nomi",
+        cell: (props) => props.row.original.name,
+    },
+    {
+        accessor: "size",
+        header: "Hajmi",
+        cell: (props) => props.row.original.size,
+    },
+    createActionButtons("0px")
+])

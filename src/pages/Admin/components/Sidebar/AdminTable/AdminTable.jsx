@@ -12,8 +12,8 @@ export default function AdminTable({ tableFor, tableHeaders, page, hooks }) {
     const { data, isLoading } = useQuery({
         queryKey: [tableFor],
         queryFn: async () => {
-            const fetchData = await axiosUserClient.get(tableRoute);
-            return fetchData.data.content;
+            if (tableFor === "files") return await (await axiosAdminClient.get(`${tableRoute}?page=0&size=100`)).data?.content;
+            return await (await axiosUserClient.get(`${tableRoute}?page=0&size=100`)).data?.content;
         },
         staleTime: 50000
     });
@@ -30,7 +30,8 @@ export default function AdminTable({ tableFor, tableHeaders, page, hooks }) {
                 state: buttonRow
             });
             try {
-                const deleteRoute = tableFor === "courses" ? "course" : tableFor === "partners" ? "partner" : tableFor;
+                const deleteRoute = tableFor.slice(0, -1);
+                // partners -> partner, files -> file, news
                 const deletedItemResponse = await axiosAdminClient.delete(`${deleteRoute}/delete/${buttonDataId}`);
                 toast.success("Muvaffaqqiyatli o'chirildi!");
                 queryClient.invalidateQueries({
@@ -43,27 +44,14 @@ export default function AdminTable({ tableFor, tableHeaders, page, hooks }) {
             }
         }
     }
-
+    
     const columns = tableHeaders;
-
     const tableInstance = useReactTable({
         columns,
-        data: data?.[tableFor] || data?.data || data || [],
+        data: data?.[tableFor] || data?.data || data?.content || data || [],
         getCoreRowModel: getCoreRowModel(),
 
     });
-
-    useLayoutEffect(() => {
-        queryClient.prefetchQuery({
-            queryKey: [tableFor],
-            queryFn: async () => {
-                const fetchData = await axiosUserClient.get(`${tableRoute}?page=0&size=100`);
-
-                return fetchData.data.content;
-            },
-            staleTime: 50000
-        });
-    }, []);
 
 
 
