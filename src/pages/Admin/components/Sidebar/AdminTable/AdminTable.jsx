@@ -76,7 +76,7 @@ export default function AdminTable({ tableFor, tableHeaders, page, hooks }) {
                     {tableInstance.getRowModel().rows.map(row => (
                         <StyledTableUnstyledRow key={row.id}>
                             {row.getVisibleCells().map(cell => {
-                                return <StyledTableData key={cell.id}>
+                                return <StyledTableData key={cell.id} >
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
 
                                 </StyledTableData>

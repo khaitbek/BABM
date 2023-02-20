@@ -6,10 +6,12 @@ import { CardGrid, CardGridImage, CardGridItem } from "../CardGrid/CardGrid";
 import { useQuery } from "@tanstack/react-query";
 import { courseApi } from "../../api";
 import Loader from "../Loader";
+import { useState } from "react";
 
 
 export function Courses() {
-
+    const [lang, setLang] = useState(localStorage.getItem("lang"));
+    console.log(lang);
     const { data: courses, isLoading, error } = useQuery({
         queryKey: ["courses"],
         queryFn: async () => {
@@ -25,7 +27,7 @@ export function Courses() {
                 {courses?.map((course, index) => (
                     <CardGridItem key={crypto.randomUUID()} colSpan={course.colSpan}>
                         <CardGridImage src={course.image} width={300} height={250} />
-                        <CourseBody title={course.titleUz} body={course.bodyUz} id={index + 1} />
+                        <CourseBody title={lang === "bodyRu" ? course.titleRu : course.titleUz} body={lang === "bodyRu" ? course.bodyRu : course.bodyUz} id={index + 1} />
                     </CardGridItem>
                 ))}
             </CardGrid>

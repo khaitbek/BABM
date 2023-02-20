@@ -13,7 +13,7 @@ export const StyledNavLink = styled.a.attrs({
 
 export const StyledNavSelect = styled.div.attrs({
 	className:
-		'pr-6 text-[17px] leading-6 bg-dropdown bg-no-repeat cursor-pointer',
+		'pr-6 text-[12px] leading-6 bg-dropdown bg-no-repeat cursor-pointer max-w-[120px]',
 })`
 	background-position: right;
 

@@ -15,12 +15,14 @@ import facebookLogo from "/images/footer/facebook.svg";
 import telegramLogo from "/images/footer/telegram.svg";
 import { TextContainer } from "../TextContainer/TextContainer";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const formSchema = zod.object({
     name: zod.string("Iltimos ismingizni kiriting!"),
     email: zod.string().email("Iltimos, to'g'ri emailni kiriting!")
 });
 
 export function Footer() {
+    const { i18n, t } = useTranslation();
     const location = useLocation();
     const success = (msg) => toast.success(msg);
     const fail = (msg) => toast.error(msg);
@@ -53,9 +55,7 @@ export function Footer() {
                         </StyledFooterTitle>
                         <TextContainer maxWidth={"190px"}>
                             <StyledFooterAddress>
-                                10011, O’zbekiston, Toshkent,
-                                Shayxontoxur tumani,
-                                Navoiy ko’chasi, 2A uy
+                                {t("footer.address")}
                             </StyledFooterAddress>
                         </TextContainer>
                         <StyledFooterContactList>
@@ -94,103 +94,93 @@ export function Footer() {
                     <StyledFooterOuter>
                         <StyledFooterForm onSubmit={handleSubmit(handleFormSubmit)}>
                             <StyledFooterField>
-                                <StyledFooterInput placeholder="ismingiz..." id="name" {...register("name")} type="text" required />
+                                <StyledFooterInput placeholder={t("footer.form.name")} id="name" {...register("name")} type="text" required />
                                 <StyledFooterLabel htmlFor="email">
-                                    Ism Familiya
+                                    {t("footer.form.name")}
                                 </StyledFooterLabel>
                             </StyledFooterField>
                             <StyledFooterField>
-                                <StyledFooterInput placeholder="elektron pochta..." {...register("email")} type="email" id="email" required />
+                                <StyledFooterInput placeholder={t("footer.form.email")} {...register("email")} type="email" id="email" required />
                                 <StyledFooterLabel htmlFor="email">
-                                    Elektron po’chta manzil
+                                    {t("footer.form.email")}
                                 </StyledFooterLabel>
                             </StyledFooterField>
                             <Button type="submit" variant="danger" padding="17px 26px" borderRadius="24px">
-                                Obuna bo'lish
+                                {t("footer.form.subscribe")} 
                             </Button>
                         </StyledFooterForm>
                         <StyledFooterMenuWrapper>
                             <StyledFooterMenu>
                                 <StyledFooterMenuTitle>
-                                    Maktab
+                                    {t("navigation.school")}
                                 </StyledFooterMenuTitle>
                                 <StyledFooterMenuList>
                                     <StyledFooterMenuItem>
-                                        Maktab haqida
+                                        {t("navigation.about_school")}
                                     </StyledFooterMenuItem>
                                     <StyledFooterMenuItem>
-                                        Rahbariyat
+                                        {t("navigation.staff")}
+
                                     </StyledFooterMenuItem>
                                     <StyledFooterMenuItem>
-                                        Maktab tuzilmasi
+                                        {t("navigation.staff")}
+
                                     </StyledFooterMenuItem>
                                 </StyledFooterMenuList>
 
                                 <StyledFooterMenu>
                                     <StyledFooterMenuTitle>
-                                        Hujjatlar
+                                        {t("navigation.documents")}
                                     </StyledFooterMenuTitle>
                                     <StyledFooterMenuList>
                                         <StyledFooterMenuItem>
-                                            331-qaror
+                                            331-{t("law")}
                                         </StyledFooterMenuItem>
                                         <StyledFooterMenuItem>
-                                            4467-qaror
+                                            4467-{t("law")}
                                         </StyledFooterMenuItem>
                                     </StyledFooterMenuList>
                                 </StyledFooterMenu>
                             </StyledFooterMenu>
                             <StyledFooterMenu>
                                 <StyledFooterMenuTitle>
-                                    Ta’lim yonalishlari
+                                    {t("navigation.spheres")}
                                 </StyledFooterMenuTitle>
                                 <StyledFooterMenuList>
-                                    <StyledFooterMenuItem>
-                                        Madaniyat va san’at
-                                    </StyledFooterMenuItem>
-                                    <StyledFooterMenuItem>
-                                        Texnika konstruktorlik va modellashtirish
-                                    </StyledFooterMenuItem>
-                                    <StyledFooterMenuItem>
-                                        Jismoniy tarbiya va sport
-                                    </StyledFooterMenuItem>
-                                    <StyledFooterMenuItem>
-                                        Hunarmandchilik va qo‘l mehnati
-                                    </StyledFooterMenuItem>
-                                    <StyledFooterMenuItem>
-                                        Ekologiya va turizm
-                                    </StyledFooterMenuItem>
-                                    <StyledFooterMenuItem>
-                                        Oliy ta’lim muassasalari va maktabga tayyorlov
-                                    </StyledFooterMenuItem>
-                                    <StyledFooterMenuItem>
-                                        Xorijiy tillar
-                                    </StyledFooterMenuItem>
+                                    {[0,0,0,0,0,0,0].map((item,index) => (
+                                        <StyledFooterMenuItem>
+                                            {t(`footer.categories.${index}`)}
+                                        </StyledFooterMenuItem>
+                                    ))}
                                 </StyledFooterMenuList>
                             </StyledFooterMenu>
                             <StyledFooterMenu>
                                 <StyledFooterMenuTitle>
-                                    Faoliyat
+                                    {t("navigation.career")}
                                 </StyledFooterMenuTitle>
                                 <StyledFooterMenuList>
                                     <StyledFooterMenuItem>
-                                        To’garak rahbarlari
+                                        {t("footer.career.heads")}
                                     </StyledFooterMenuItem>
                                     <StyledFooterMenuItem>
-                                        Boshqa hodimlar
+                                        {t("footer.career.other_staff")}
+
                                     </StyledFooterMenuItem>
                                 </StyledFooterMenuList>
 
                                 <StyledFooterMenu className="">
                                     <StyledFooterMenuTitle>
-                                        Axborot xizmati
+                                        {t("navigation.info")}
+
                                     </StyledFooterMenuTitle>
                                     <StyledFooterMenuList>
                                         <StyledFooterMenuItem>
-                                            Galereya
+                                            {t("footer.info.gallery")}
+
                                         </StyledFooterMenuItem>
                                         <StyledFooterMenuItem>
-                                            Videogalereya
+                                            {t("footer.info.video_gallery")}
+
                                         </StyledFooterMenuItem>
                                     </StyledFooterMenuList>
                                 </StyledFooterMenu>

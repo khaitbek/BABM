@@ -8,6 +8,7 @@ import App from './App'
 import GlobalStyles from "./styles/global";
 import "./styles/styles.css";
 import 'react-toastify/dist/ReactToastify.css';
+import "./lang/i18n";
 
 export const axiosUserClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL + "/client"

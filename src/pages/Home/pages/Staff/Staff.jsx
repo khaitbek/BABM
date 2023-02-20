@@ -1,14 +1,19 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import BackButton from "../../../../components/BackButton";
 import { TextContainer } from "../../../../components/TextContainer/TextContainer";
 import { StyledContainer, StyledDiv } from "../../../../styles/global"
+import BreadCrumb from "../../components/BreadCrumb";
 import { StyledSingleStuff, StyledSingleStuffContact, StyledSingleStuffImg, StyledSingleStuffSocialImg, StyledSingleStuffSocialItem, StyledSingleStuffSocialLink, StyledSingleStuffSocials, StyledSingleStuffText, StyledSingleStuffTitle, StyledStuffContact, StyledStuffImg, StyledStuffItem, StyledStuffList, StyledStuffText, StyledStuffTitle } from "./staff.styles"
 import facebookImg from "/facebook.svg";
 import instagramImg from "/instagram.svg";
 import telegramImg from "/telegram.svg";
 export default function Staff() {
+    const { t } = useTranslation();
     return (
         <StyledContainer>
+            <BreadCrumb links={[{ prev: true, name: "navigation.school" }, { prev: false, name: "navigation.staff" }]} />
+
             <StyledSingleStuff>
                 <StyledSingleStuffImg src="https://via.placeholder.com/300x400" width={300} height={400} alt="Mirsagatova Tamara Maxamatovna" />
                 <StyledDiv>
@@ -19,11 +24,11 @@ export default function Staff() {
                             Maxamatovna
                         </StyledSingleStuffTitle>
                         <StyledSingleStuffText>
-                            Toshkent shahar BABM direktori
+                            {t("CEO")}
                         </StyledSingleStuffText>
                         <StyledSingleStuffContact>
-                            Telefon raqami: +998 71 237 34 22
-                            E-mail: info@barkamolavlod.uz
+                            {t("phone")}: +998 71 237 34 22 <br />
+                            {t("footer.form.email")}: info@barkamolavlod.uz
                         </StyledSingleStuffContact>
                     </TextContainer>
                     <StyledSingleStuffSocials>
@@ -53,11 +58,12 @@ export default function Staff() {
                         Mirsagatova Tamara Maxamatovna
                     </StyledStuffTitle>
                     <StyledStuffText>
-                        Toshkent shahar BABM direktori
+                        {t("CEO")}
+
                     </StyledStuffText>
                     <StyledStuffContact>
-                        Telefon raqami: +998 71 237 34 22
-                        E-mail: info@barkamolavlod.uz
+                        {t("phone")}: +998 71 237 34 22
+                        {t("footer.form.email")}: info@barkamolavlod.uz
                     </StyledStuffContact>
                 </StyledStuffItem>
                 <StyledStuffItem>
@@ -66,11 +72,12 @@ export default function Staff() {
                         Mirsagatova Tamara Maxamatovna
                     </StyledStuffTitle>
                     <StyledStuffText>
-                        Toshkent shahar BABM direktori
+                        {t("CEO")}
+
                     </StyledStuffText>
                     <StyledStuffContact>
-                        Telefon raqami: +998 71 237 34 22
-                        E-mail: info@barkamolavlod.uz
+                        {t("phone")}: +998 71 237 34 22
+                        {t("footer.form.email")}: info@barkamolavlod.uz
                     </StyledStuffContact>
                 </StyledStuffItem>
                 <StyledStuffItem>
@@ -79,11 +86,12 @@ export default function Staff() {
                         Mirsagatova Tamara Maxamatovna
                     </StyledStuffTitle>
                     <StyledStuffText>
-                        Toshkent shahar BABM direktori
+                        {t("CEO")}
+
                     </StyledStuffText>
                     <StyledStuffContact>
-                        Telefon raqami: +998 71 237 34 22
-                        E-mail: info@barkamolavlod.uz
+                        {t("phone")}: +998 71 237 34 22
+                        {t("footer.form.email")}: info@barkamolavlod.uz
                     </StyledStuffContact>
                 </StyledStuffItem>
                 <StyledStuffItem>
@@ -92,11 +100,12 @@ export default function Staff() {
                         Mirsagatova Tamara Maxamatovna
                     </StyledStuffTitle>
                     <StyledStuffText>
-                        Toshkent shahar BABM direktori
+                        {t("CEO")}
+
                     </StyledStuffText>
                     <StyledStuffContact>
-                        Telefon raqami: +998 71 237 34 22
-                        E-mail: info@barkamolavlod.uz
+                        {t("phone")}: +998 71 237 34 22
+                        {t("footer.form.email")}: info@barkamolavlod.uz
                     </StyledStuffContact>
                 </StyledStuffItem>
             </StyledStuffList>

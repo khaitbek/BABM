@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.accordion-item {
+    position: relative;
+}
+
+.accordion-item::after {
+    content: "-";
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    color: gray;
+}
+
+.accordion-item:has([hidden])::after {
+    content: "+";
+}

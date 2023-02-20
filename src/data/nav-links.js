@@ -1,48 +1,32 @@
 const NavLinks = [
 	{
-		title: 'Maktab',
+		title: 'school',
 		dropdown: [
-			{ value: 'Maktab haqida', label: 'about' },
-			{ value: 'Rahbariyat', label: 'staff' },
-			{ value: 'Maktab tuzilmasi', label: 'school' },
-			{ value: 'Dropdown 3', label: 'Dropdown 3' },
-			{ value: 'Dropdown 4', label: 'Dropdown 4' },
+			{ value: 'about_school', label: 'about' },
+			{ value: 'staff', label: 'staff' },
+			{ value: 'system', label: 'school' },
 		],
 	},
 	{
-		title: 'Hujjatlar',
+		title: 'documents',
 		dropdown: [
-			{ value: 'Dropdown 1', label: 'Dropdown 1' },
-			{ value: 'Dropdown 2', label: 'Dropdown 2' },
-			{ value: 'Dropdown 3', label: 'Dropdown 3' },
-			{ value: 'Dropdown 4', label: 'Dropdown 4' },
 		],
 	},
 	{
-		title: 'Ta’lim yo’nalishlari',
+		title: 'spheres',
 		dropdown: [
-			{ value: "Yo'nalishlar", label: 'spheres' },
-			{ value: 'Dropdown 2', label: 'Dropdown 2' },
-			{ value: 'Dropdown 3', label: 'Dropdown 3' },
-			{ value: 'Dropdown 4', label: 'Dropdown 4' },
+			{ value: "spheres", label: 'spheres' },
 		],
 	},
 	{
-		title: 'Faoliyat',
+		title: 'career',
 		dropdown: [
-			{ value: 'Dropdown 1', label: 'Dropdown 1' },
-			{ value: 'Dropdown 2', label: 'Dropdown 2' },
-			{ value: 'Dropdown 3', label: 'Dropdown 3' },
-			{ value: 'Dropdown 4', label: 'Dropdown 4' },
 		],
 	},
 	{
-		title: 'Axborot xizmati',
+		title: 'info',
 		dropdown: [
-			{ value: 'Yangiliklar', label: 'news' },
-			{ value: 'Dropdown 2', label: 'Dropdown 2' },
-			{ value: 'Dropdown 3', label: 'Dropdown 3' },
-			{ value: 'Dropdown 4', label: 'Dropdown 4' },
+			{ value: 'news', label: 'news' },
 		],
 	},
 ];

@@ -5,8 +5,11 @@ import { newsApi } from "../../../../api";
 import { StyledPostTime, StyledPostTimeWrapper, StyledPostTitle } from "../../../../components/News/news-styles";
 import { TextContainer } from "../../../../components/TextContainer/TextContainer";
 import StyledSidebar, { StyledSidebarNewsItem, StyledSidebarNewsList, StyledSidebarTopText } from "./sidebar-news.styles";
+import lang from "../../../../data/lang";
+import { useTranslation } from "react-i18next";
 
 export default function SidebarNews() {
+  const { t,i18n } = useTranslation();
   const navigate = useNavigate();
   const { data: news, isLoading, error } = useQuery({
     queryKey: ["news"],
@@ -21,7 +24,7 @@ export default function SidebarNews() {
   return (
     <StyledSidebar className="pt-[80px]">
       <StyledSidebarTopText>
-        Boshqa yangiliklar
+        {t("other_news")}
       </StyledSidebarTopText>
       <StyledSidebarNewsList>
         {
@@ -38,7 +41,9 @@ export default function SidebarNews() {
                     {`${new Date().getHours()}:${new Date().getMinutes()}`} | {`2023.01.18`}
                   </StyledPostTime>
                 </StyledPostTimeWrapper>
-                <StyledPostTitle>{post.titleUz}</StyledPostTitle>
+                <StyledPostTitle>
+                  {i18n.language === 'uz' ? post.titleUz : post.titleRu}
+                </StyledPostTitle>
               </TextContainer>
             </StyledSidebarNewsItem>
           ))

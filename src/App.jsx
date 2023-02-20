@@ -3,7 +3,6 @@ import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import RootLayout from "./layouts/layout";
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { PacmanLoader } from "react-spinners";
 import AdminNews from "./pages/Admin/pages/News/News";
 import AdminPartner from "./pages/Admin/pages/Partner";
@@ -29,7 +28,7 @@ const Admin = lazy(() => import("./pages/Admin"));
 const Login = lazy(() => import("./pages/Login"));
 
 const token = localStorage.getItem("babm_token");
-
+import 'aos/dist/aos.css';
 function App() {
 	useEffect(() => {
 		AOS.init();

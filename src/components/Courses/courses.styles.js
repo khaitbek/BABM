@@ -4,6 +4,9 @@ export const StyledCourseBody = styled.div.attrs({ className: "absolute min-h-[1
     background-image:${props => `/images/courses/course-icon-${props.id}.svg`};
     box-shadow: 0px 4px 20px rgba(112, 144, 176, 0.25);
     backdrop-filter: blur(5px);
+    max-height:50px;
+    overflow:hidden;
+    text-overflow:ellipsis;
 `;
 
 export const StyledCourseTitle = styled.div.attrs({ className: "text-[#012245] font-medium text-[20px] mb-2", })``;
