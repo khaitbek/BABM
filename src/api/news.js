@@ -5,7 +5,6 @@ const newsApi = {
         return await axiosAdminClient.post("/news/save", data);
     },
     put: async (data, id) => {
-        console.log(data);
         return await axiosAdminClient.put(`/news/edit/${id}`);
     },
     getAll: async () => {

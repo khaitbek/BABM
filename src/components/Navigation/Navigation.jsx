@@ -18,7 +18,7 @@ export default function Navigation() {
 	const navigate = useNavigate();
 	return (
 		<StyledNav>
-			<StyledNavList id='primaryNavigation' title='Asosiy menu'>
+			<StyledNavList id='primaryNavigation'>
 				{navLinks.map((navLink) => (
 					<StyledNavItem key={crypto.randomUUID()}>
 						<StyledNavSelect>
@@ -38,7 +38,7 @@ export default function Navigation() {
 					</StyledNavItem>
 				))}
 				<StyledNavItem>
-					<StyledNavSelect>
+					{/* <StyledNavSelect>
 						{t("lang")}
 						<StyledNavSelectWrapper>
 							<StyledNavOption onClick={() => {
@@ -54,7 +54,21 @@ export default function Navigation() {
 								Ruscha
 							</StyledNavOption>
 						</StyledNavSelectWrapper>
-					</StyledNavSelect>
+					</StyledNavSelect> */}
+					<ul class="lang-list">
+						<li onClick={() => {
+							localStorage.setItem("lang", "uz");
+							changeLanguage("uz");
+						}} class="lang-item">
+							<div class={i18n.language === "uz" ? "lang-link active-lang" : "lang-link"} href="#"> УЗ </div>
+						</li>
+						<li onClick={() => {
+							localStorage.setItem("lang", "ru");
+							changeLanguage("ru");
+						}} class={i18n.language === "ru" ? "lang-link active-lang" : "lang-link"}>
+							<div class="lang-link" href="#"> РУ </div>
+						</li>
+					</ul>
 				</StyledNavItem>
 			</StyledNavList>
 		</StyledNav>

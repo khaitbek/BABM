@@ -5,7 +5,6 @@ const courseApi = {
         return await axiosAdminClient.post("/course/save", data);
     },
     put: async (data, id) => {
-        console.log(data);
         return await axiosAdminClient.put(`/course/edit/${id}`);
     },
     getAll: async () => {

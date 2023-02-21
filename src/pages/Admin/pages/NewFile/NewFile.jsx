@@ -28,11 +28,8 @@ export default function NewFile() {
     });
 
     const newFileHandler = async (data) => {
-        console.log(data);
         try {
             const mutationResponse = await mutateAsync(data);
-
-            console.log(mutationResponse.data);
             toast.success("Muvaffaqqiyatli amalga oshirildi!");
             reset();
             setImage(undefined);
@@ -43,8 +40,6 @@ export default function NewFile() {
     };
 
     useEffect(() => {
-        console.log("Rasm o'zgardi");
-
         if (!image) {
             setPreview(undefined);
             return
@@ -82,7 +77,6 @@ export default function NewFile() {
                         onDrop={(e) => {
                             e.stopPropagation();
                             e.preventDefault();
-                            console.log(e.dataTransfer.files);
 
                             setImage(e.dataTransfer.files[0]);
                         }}>

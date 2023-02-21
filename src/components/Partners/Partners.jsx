@@ -7,8 +7,9 @@ import Slider from 'react-slick';
 import partnerApi from "../../api/partnerApi";
 import Loader from "../Loader";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 export function Partners() {
-
+	const { t, i18n } = useTranslation();
 	const { data: partners, isLoading, error } = useQuery({
 		queryKey: ["partners"],
 		queryFn: async () => {
@@ -34,10 +35,9 @@ export function Partners() {
 	if (isLoading) return <Loader />
 	if (error) return <h2>Hozirda hamkorlar mavjud emas...</h2>
 	return (
-		<GridSection title='-Hamkorlar-' subtitle='Bizning hamkorlar'>
+		<GridSection title={t("partners.partners_title")} subtitle={t("partners.partners_text")}>
 			<Slider {...settings}>
 				{partners.map((partner) => (
-					console.log(partners.length),
 					<CardGridItem key={crypto.randomUUID()} colSpan={1}>
 						<StyledPartner>
 							<CardGridImage
@@ -46,7 +46,7 @@ export function Partners() {
 								height={51}
 								description={partner.title}
 							/>
-								<StyledPartnerTitle href={partner.url} target="blank">{partner.titleUz}</StyledPartnerTitle>
+								<StyledPartnerTitle href={partner.url} target="blank">{i18n.language === "uz" ? partner.titleUz : partner.titleRu}</StyledPartnerTitle>
 						</StyledPartner>
 					</CardGridItem>
 				))}

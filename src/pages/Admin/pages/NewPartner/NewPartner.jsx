@@ -24,7 +24,6 @@ export default function NewPartner() {
         defaultValues: state
     });
     const newCourseHandler = async (data) => {
-        console.log(data);
         try {
             const mutationResponse = await mutateAsync(data);
             toast.success("Muvaffaqqiyatli amalga oshirildi!");

@@ -25,9 +25,7 @@ export default function Login() {
             const loginMutationData = await mutateAsync(data);
             localStorage.setItem("babm_token", `${loginMutationData.data.type} ${loginMutationData.data.token}`);
             navigate("/admin/courses");
-            console.log("Redirecting ...");
         } catch (error) {
-            console.log(error);
             toast.error("Parol yoki login noto'g'ri!");
         }
     }

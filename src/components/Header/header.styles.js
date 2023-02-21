@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header.attrs({
-    className: "absolute  pt-[25px] pb-[30px] bg-white"
+    className: "absolute border border-[3px] bg-white"
 })`
     z-index:10;
     top:30px;

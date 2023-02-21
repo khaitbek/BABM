@@ -10,7 +10,6 @@ export default function Admin() {
   const navigate = useNavigate();
   const { pathname, hash, key, search, state } = useLocation();
   useEffect(() => {
-    console.log(localStorage.getItem("babm_token"));
     if (!localStorage.getItem("babm_token")) navigate("/login");
     else {
       navigate("courses", {

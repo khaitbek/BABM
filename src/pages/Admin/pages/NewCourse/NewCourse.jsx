@@ -11,7 +11,6 @@ import StyledForm, { StyledFormButton, StyledFormCloseButton, StyledFormGroup, S
 export default function NewCourse() {
     const { state } = useLocation();
     const { id } = useParams();
-    console.log(state);
     const navigate = useNavigate();
     const { mutateAsync } = useMutation({
         mutationFn: async (data) => {
@@ -30,11 +29,9 @@ export default function NewCourse() {
         defaultValues: state || {}
     });
     const newCourseHandler = async (data) => {
-        console.log(data);
         try {
             const mutationResponse = await mutateAsync(data);
 
-            console.log(mutationResponse.data);
             toast.success("Muvaffaqqiyatli amalga oshirildi!");
             reset();
         } catch (err) {

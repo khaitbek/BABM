@@ -15,7 +15,6 @@ export default function NewsPage() {
     },
     staleTime: 50000
   });
-  console.log(news?.[0].id);
   useEffect(() => {
     if (news) {
       navigate(`${news?.[0]?.id}`, {

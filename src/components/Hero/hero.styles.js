@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const StyledHero = styled.section.attrs({
-	className: 'relative pt-[142px]',
+	className: 'hero relative pt-[142px]',
 })`
 	/* isolation:isolate;
     &::before{

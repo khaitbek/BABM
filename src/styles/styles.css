@@ -12,8 +12,69 @@
     top: 30px;
     right: 5px;
     color: gray;
+    pointer-events: none;
 }
 
 .accordion-item:has([hidden])::after {
     content: "+";
+}
+
+.toggle{
+    position: absolute;
+    opacity: 0;
+}
+
+.lang-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70px;
+    height: 36px;
+    margin-right: 25px;
+    padding-left: 0;
+    background-color: #dce6ff;
+    border-radius: 39px;
+}
+
+.lang-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #a6a6a6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active-lang {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-left: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+main:has(.hero){
+    padding-top: 0;
 }

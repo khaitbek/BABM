@@ -15,8 +15,10 @@ import { StyledButton } from '../../components/Button/button.styles';
 import { Button } from '../../components/Button/Button';
 import { TextContainer } from '../TextContainer/TextContainer';
 import { socialIcons } from '../../data/hero-social';
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+	const { t } = useTranslation();
 	return (
 		<StyledHero>
 			<StyledHeroSocialList
@@ -42,20 +44,18 @@ export function Hero() {
 						initial={{ y: '-100%', opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ delay: 0.5, duration: 1 }}>
-						<StyledHeroSpan>Toshkent Shahar</StyledHeroSpan>
+						<StyledHeroSpan>{t("hero.hero_subtitle")}</StyledHeroSpan>
 						<br />
-						Barkamol Avlod Bolalar Maktabi
+						{t("hero.hero_title")}
 					</StyledHeroTitle>
 					<StyledHeroText
 						initial={{ opacity: 0, x: '100%' }}
 						animate={{ opacity: 1, x: '0%' }}
 						transition={{ delay: 1, duration: 1 }}>
-						Keling, koʻring, biz bilan birgalikda bolalar bilimini yuksaltiring!
-						Zero, Yangi Oʻzbekistonning kelajagi boʻlmish barkamol avlodni
-						voyaga yetkazish har birimizning burchimizdir.
+						{t("hero.hero_text")}
 					</StyledHeroText>
 					<Button variant='danger' padding='12px 23px' borderRadius='100vmax'>
-						Batafsil
+						{t("read_more")}
 					</Button>
 				</TextContainer>
 			</StyledContainer>

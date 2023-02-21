@@ -10,6 +10,8 @@ const NavLinks = [
 	{
 		title: 'documents',
 		dropdown: [
+			{ value: 'dropdown1', label: '' },
+			{ value: 'dropdown2', label: '' },
 		],
 	},
 	{
@@ -21,6 +23,8 @@ const NavLinks = [
 	{
 		title: 'career',
 		dropdown: [
+			{ value: 'dropdown1', label: '' },
+			{ value: 'dropdown2', label: '' },
 		],
 	},
 	{

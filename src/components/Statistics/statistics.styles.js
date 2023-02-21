@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledStats = styled.section.attrs({
 	className:
-		'absolute py-[30px] pr-[74px] pl-[31px] bg-darkcyan-100 rounded-[30px]',
+		'absolute py-[30px] pr-[74px] pl-[31px] bg-[#012245] rounded-[30px]',
 })`
 	width: 1150px;
 	left: 0;
@@ -11,7 +11,7 @@ export const StyledStats = styled.section.attrs({
 	bottom: -8%;
 `;
 export const StyledStatList = styled.ul.attrs({
-	className: 'grid grid-cols-[repeat(4,255px)] gap-[17px]',
+	className: 'grid grid-cols-[repeat(4,255px)] gap-[17px] items-center',
 })``;
 export const StyledStatItem = styled.li.attrs({
 	className: 'relative flex items-center gap-4 before:block before:w-[90px]',
@@ -21,10 +21,11 @@ export const StyledStatItem = styled.li.attrs({
 		aspect-ratio: 1;
 		background-image: ${(props) => {
 			return `url(${props.image})`;
-		}};
+	}};
+		border-radius:20px;
 		background-size: 90px;
 		background-repeat: no-repeat;
-		bg-position: center;
+		background-position: center;
 	}
 `;
 export const StyledStatTitle = styled.h3.attrs({

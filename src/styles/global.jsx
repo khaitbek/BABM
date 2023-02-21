@@ -468,9 +468,9 @@ a > img{
 `
 
 export const StyledContainer = styled.div.attrs({ className: "container" })``;
-export const StyledPageTop = styled.div.attrs({ className: "relative pt-[39px] pb-[163px] bg-homboi bg-no-repeat bg-cover" })`
-  
-
+export const StyledPageTop = styled.div.attrs({ className: "relative  pt-[39px] pb-[163px] bg-homboi bg-no-repeat bg-cover" })`
+  /* z-index: 100; */
+  background-attachment: fixed;
 `
 export const StyledApp = styled(motion.div).attrs({ className: "App" })`
   

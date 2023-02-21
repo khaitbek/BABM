@@ -6,7 +6,6 @@ import { StyledButton } from "../Button/button.styles";
 
 export default function BackButton() {
   const { t, i18n } = useTranslation();
-  console.log(i18n);
   const navigate = useNavigate();
   return (
     <StyledButton onClick={() => {

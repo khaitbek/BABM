@@ -13,10 +13,9 @@ export const StyledNavLink = styled.a.attrs({
 
 export const StyledNavSelect = styled.div.attrs({
 	className:
-		'pr-6 text-[12px] leading-6 bg-dropdown bg-no-repeat cursor-pointer max-w-[120px]',
+		'pr-6 text-[12px] leading-6 bg-dropdown bg-no-repeat cursor-pointer max-w-[120px]  pt-[30px] pb-[30px]',
 })`
-	background-position: right;
-
+	background-position: right -5px center;
 	&:hover .select-list {
 		display:grid;
 	}

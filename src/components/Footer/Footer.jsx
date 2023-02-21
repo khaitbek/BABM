@@ -37,7 +37,6 @@ export function Footer() {
         if (!isValid) return fail("Iltimos, formani to'liq va to'g'ri to'ldiring!");
         return success("Muvaffaqqiyatli yuborildi!") && reset();
     }
-    console.log(["/login", "/admin", "/news/add"].join(""));
     return (
         <StyledFooter style={{
             display: ["/login", "/admin","/news/add"].includes(location.pathname) ? "none" : "block"
@@ -50,8 +49,8 @@ export function Footer() {
                         </StyledFooterLink>
 
                         <StyledFooterTitle>
-                            <StyledFooterSpan>Toshkent shahar</StyledFooterSpan> <br />
-                            Barkamol Avlod Bolalar Maktabi
+                            <StyledFooterSpan>{t("hero.hero_subtitle")}</StyledFooterSpan> <br />
+                            {t("hero.hero_title")}
                         </StyledFooterTitle>
                         <TextContainer maxWidth={"190px"}>
                             <StyledFooterAddress>

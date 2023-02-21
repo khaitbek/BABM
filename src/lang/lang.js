@@ -3,13 +3,13 @@ const langData = {
         lang: "Tilni tanlang",
         uz: "O'zbekcha",
         ru: "Русский",
-
         courses: {
             courses_title: "-To’garaklar-",
             courses_text: "Maktabimizdagi mavjud to’garaklar bilan tanishing",
         },
         hero: {
-            hero_title: "Toshkent Shahar Barkamol Avlod Bolalar Maktabi",
+            hero_subtitle: "Toshkent Shahar ",
+            hero_title: "Barkamol Avlod Bolalar Maktabi",
             hero_text: "Keling, koʻring, biz bilan birgalikda bolalar bilimini yuksaltiring! Zero, Yangi Oʻzbekistonning kelajagi boʻlmish barkamol avlodni voyaga yetkazish har birimizning burchimizdir.",
         },
         read_more: "Batafsil",
@@ -20,9 +20,11 @@ const langData = {
             system: "Maktab tuzilmasi",
             news: "Yangiliklar",
             documents: "Hujjatlar",
-            spheres: "Ta'lim yo'nalishlari",
+            spheres: "Yo'nalishlari",
             career: "Faoliyat",
             info: "Axborot xizmati",
+            dropdown1: "Dropdown 1",
+            dropdown2: "Dropdown 2",
         },
         law: "qaror",
         news: {
@@ -72,6 +74,7 @@ Jumladan, “Barkamol avlod” respublika bolalar maktabi AKFA Universiteti, Hun
         system: {
             title: "Toshkent shahar “Barkamol Avlod” bolalar maktabining tuzilmasi"
         },
+        stats: ["Toshkent BABM ga jalb qilingan o’quvchilar soni", "Maktabi o’quvchilari soniga nisbati", "Toshkent BABM dagi xodimlar soni", "Toshkent BABM dagi to’garaklar soni"],
         back: "Orqaga",
         other_news: "Boshqa yangiliklar",
         share: "Yangilikni ijtimoiy tarmoqlarda ulashing",
@@ -88,21 +91,25 @@ Jumladan, “Barkamol avlod” respublika bolalar maktabi AKFA Universiteti, Hun
             courses_title: "-Круги-",
             courses_text: "Познакомьтесь с действующими клубами в нашей школе",
         },
+        stats: ["Количество учащихся БАБМ", "Отношение к численности школьников", "Численность работающих в БАБМ", "Количество клубов в БАБМ"],
         hero: {
-            hero_title: "Ташкентская городская детская школа Баркамол Авлод",
+            hero_title: "детская школа Баркамол Авлод",
+            hero_subtitle: "Ташкентская городская",
             hero_text: "Приходите к нам и улучшайте образование детей! Ведь долг каждого из нас – воспитать совершенное поколение, за которым будущее Нового Узбекистана.",
         },
         read_more: "Более",
         navigation: {
             school: "Школа",
             documents: "Документы",
-            spheres: "Образовательные направления",
+            spheres: "Образование",
             career: "Активность",
-            info: "Информационная служба",
+            info: "Информация",
             about_school: "Про школу",
             staff: "Лидерство",
             system: "Структура школы",
             news: "Новости",
+            dropdown1: "Dropdown 1",
+            dropdown2: "Dropdown 2",
         },
         news: {
             news_title: "Новости",

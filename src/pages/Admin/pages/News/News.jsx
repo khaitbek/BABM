@@ -19,8 +19,6 @@ export default function AdminNews() {
             state: item
         });
     };
-    console.log(news);
-    
     return (
         <div>
             {isLoading && <Loader />}

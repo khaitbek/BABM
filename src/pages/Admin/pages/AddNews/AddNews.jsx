@@ -29,7 +29,6 @@ export default function AddNews() {
         defaultValues: state || {}
     });
     const addNewsHandler = async (data) => {
-        console.log(data);
         try {
             const mutationResponse = await mutateAsync(data);
             toast.success("Muvaffaqqiyatli amalga oshirildi!");

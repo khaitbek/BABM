@@ -41,7 +41,6 @@ export default function AdminTable({ tableFor, tableHeaders, page, hooks }) {
                     exact: true
                 })
             } catch (error) {
-                console.log(error);
                 toast.error("Xatolik yuz berdi");
             }
         }

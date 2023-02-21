@@ -11,8 +11,10 @@ import { useQuery } from "@tanstack/react-query";
 import Loader from "../Loader";
 import { newsApi } from "../../api";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function News() {
+	const { t, i18n } = useTranslation();
 	const navigate = useNavigate();
 	const { data: news, isLoading, error } = useQuery({
 		queryKey: ["news"],
@@ -26,8 +28,8 @@ export function News() {
 	return (
 		<GridSection
 			paddingTop='64px'
-			title='-Yangiliklar-'
-			subtitle='So’ngi yangilik, e’lon va habarlar'>
+			title={t("news.news_title")}
+			subtitle={t("news.news_text")}>
 			<CardGrid gap='24px' itemWidth='368px' rows={3}>
 				{news.map((post) => (
 					<CardGridItem onClick={() => {
@@ -47,7 +49,7 @@ export function News() {
 									{`${new Date().getHours()}:${new Date().getMinutes()}`} | {`2023.01.18`}
 								</StyledPostTime>
 							</StyledPostTimeWrapper>
-							<StyledPostTitle>{post.titleUz}</StyledPostTitle>
+							<StyledPostTitle>{i18n.language === "uz" ? post.titleUz : post.titleRu}</StyledPostTitle>
 						</TextContainer>
 					</CardGridItem>
 				))}
